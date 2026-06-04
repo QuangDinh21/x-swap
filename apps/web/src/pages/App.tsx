@@ -56,7 +56,7 @@ export default function App() {
 
   const shouldBlockPath = isPathBlocked(pathname)
   if (shouldBlockPath && pathname !== '/swap') {
-    return <Navigate to="/swap" replace />
+    return <Navigate to="/" replace />
   }
   return (
     <ErrorBoundary>
