@@ -53,6 +53,11 @@ if (window.ethereum) {
   window.ethereum.autoRefreshOnNetworkChange = false
 }
 
+// Redirect to /swap if BrowserRouter is enabled and current path is outside basename
+if (isBrowserRouterEnabled() && !window.location.pathname.startsWith('/swap')) {
+  window.location.replace('/swap')
+}
+
 function Updaters() {
   const location = useLocation()
 

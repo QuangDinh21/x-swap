@@ -48,10 +48,11 @@ export const useTabsContent = (): TabsSection[] => {
         {
           title: t('common.transfer2'),
           href: window.location.origin,
+          target: '_self',
         },
         {
           title: t('common.swap'),
-          href: '/swap',
+          href: '/',
           isActive: pathname === '/' || pathname.startsWith('/swap') || pathname.startsWith('/limit') || pathname.startsWith('/send'),
         },
         {
